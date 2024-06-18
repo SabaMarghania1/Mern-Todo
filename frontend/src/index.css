@@ -26,14 +26,22 @@
 
   --border-color: #393a4b;
 
-  --bg-desktop-image: url('bg-desktop-dark.jpg');
-  --bg-mobile-image: url('bg-mobile-dark.jpg');
+  --bg-desktop-image: url('../public/bg-desktop-dark.jpg');
+  --bg-mobile-image: url('../public/bg-mobile-dark.jpg');
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
 }
 
 body {
@@ -46,13 +54,19 @@ header {
   background-image: var(--bg-mobile-image);
   height: 200px;
   padding: 0 24px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
 }
 
 header div {
+  margin: 0 auto;
   padding-top: 48px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  max-width: 540px;
 }
 
 ul {
@@ -62,15 +76,18 @@ ul {
 input {
   background-color: var(--container-bg);
   color: white;
+  display: flex;
 }
 .container {
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  max-width: 598px;
   align-items: center;
-  width: calc(100%-48px);
-  max-width: 540px;
+  justify-content: center;
+  width: calc(100% - 48px);
+
   gap: 16px;
+  width: 100%;
 }
 
 .form {
@@ -93,7 +110,8 @@ input {
 }
 
 .form {
-  width: 100%;
+  max-width: 540px;
+  width: calc(100% - 48px);
   margin-top: -92px;
   display: flex;
   justify-content: center;
@@ -102,7 +120,6 @@ input {
   input {
     width: 100%;
     padding: 16px 52px;
-    margin: 0 24px;
     display: inline-block;
     border-radius: 4px;
     box-sizing: border-box;
@@ -121,7 +138,7 @@ input {
 
   button {
     position: absolute;
-    left: 44px;
+    left: 3.5%;
     top: 50%;
     transform: translateY(-50%);
     border: none;
@@ -130,7 +147,6 @@ input {
 }
 
 .todo__container {
-  width: 100%;
   background-color: var(--container-bg);
   width: calc(100% - 48px);
   max-width: 540px;
@@ -186,6 +202,13 @@ input {
   border-radius: 5px;
 }
 
+.filters div {
+  display: flex;
+  width: calc(100% - 48px);
+  justify-content: center;
+  gap: 20px;
+}
+
 .filter {
   font-size: 14px;
   letter-spacing: -0.194px;
@@ -193,4 +216,45 @@ input {
 
 .filter.active {
   color: rgba(58, 124, 253, 1);
+}
+
+@media screen and (min-width: 900px) {
+  header {
+    background-image: var(--bg-desktop-image);
+    height: 300px;
+  }
+
+  header div {
+    padding-top: 70px;
+  }
+
+  .logo {
+    font-size: 40px;
+    letter-spacing: 15px;
+  }
+
+  .form {
+    margin-top: -150px;
+
+    input {
+      padding: 23px 52px;
+      font-size: 18px;
+    }
+    input::placeholder {
+      font-size: 18px;
+    }
+  }
+
+  .todo {
+    padding: 23px 20px 20px 20px;
+  }
+
+  .filters {
+    /* display: none; */
+    background-color: transparent;
+  }
+
+  .filters div {
+    margin-top: -63px;
+  }
 }
