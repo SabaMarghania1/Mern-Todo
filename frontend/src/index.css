@@ -11,8 +11,8 @@
 
   --border-color: #e3e4f1;
 
-  --bg-desktop-image: url('bg-desktop-light.jpg');
-  --bg-mobile-image: url('bg-mobile-light.jpg');
+  --bg-desktop-image: url('../public/bg-desktop-light.jpg');
+  --bg-mobile-image: url('../public/bg-mobile-light.jpg');
 }
 
 [data-theme='dark'] {
