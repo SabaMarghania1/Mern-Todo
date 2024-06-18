@@ -6,6 +6,7 @@ import Input from './components/Input';
 import TodoContainer from './components/TodoContainer';
 import Todos from './components/Todos';
 import Statistics from './components/Statistics';
+import Filters from './components/Filters';
 function App() {
   const [name, setName] = useState('');
   const [todos, setTodos] = useState([]);
@@ -20,6 +21,8 @@ function App() {
           <Todos />
           <Statistics />
         </TodoContainer>
+
+        <Filters />
       </Main>
     </>
   );
