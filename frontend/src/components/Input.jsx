@@ -1,6 +1,6 @@
 export default function Input({setName, name, handleSubmit}) {
   return (
-    <form className="form">
+    <form className="form" onSubmit={handleSubmit}>
       <button>
         <span className="circle"></span>
       </button>

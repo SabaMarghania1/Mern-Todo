@@ -257,4 +257,8 @@ input {
   .filters div {
     margin-top: -63px;
   }
+
+  .todo__name {
+    font-size: 18px;
+  }
 }
