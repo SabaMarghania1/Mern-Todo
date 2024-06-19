@@ -4,7 +4,7 @@ This project is a simple Todo application built using Mern Stack It allows users
 
 ## Technologies Used
 
-- Front: React
+- Front: React, Axios
 - Back: Node.js, Express
 - Database: MongoDB,Mongoose (for interactions).
 

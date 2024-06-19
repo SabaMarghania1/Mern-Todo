@@ -4,7 +4,7 @@ import axios from 'axios';
 export default function Statistics({todos, setTodos}) {
   const clearCompleted = async () => {
     try {
-      const activeTodos = todos.filter(todo => !todo.completed);
+      const activeTodos = todos.filter(todo => todo.completed);
       setTodos(activeTodos);
 
       await axios.delete('https://mern-todo-30re.onrender.com/api/v1/todos/');
